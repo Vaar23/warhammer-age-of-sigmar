@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="66" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="67" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -13,6 +13,7 @@
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
+    <costType id="5bd6-0a45-5735-ae2c" name="Die Rolls" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
   <profileTypes>
     <profileType id="1960-ca8e-67ce-2014" name="Unit">
@@ -227,6 +228,14 @@
     <categoryEntry id="a64e-c067-e836-3c21" name="LUMINETH REALM-LORDS" hidden="false"/>
     <categoryEntry id="5f5a-43ec-c3f8-f174" name="CITIES OF SIGMAR" hidden="false"/>
     <categoryEntry id="fe3f-d230-7e2c-fba2" name="Unique General" hidden="false"/>
+    <categoryEntry id="0065-ac21-6ff5-8025" name="Champion" hidden="false"/>
+    <categoryEntry id="9705-3b59-ce7a-eac2" name="Follower" hidden="false"/>
+    <categoryEntry id="e647-64a9-63a0-f54c" name="0 Unit Leader" hidden="true"/>
+    <categoryEntry id="0478-3545-1aca-947a" name="1 Unit Leader" hidden="true"/>
+    <categoryEntry id="3daf-a035-d3bc-1404" name="2 Unit Leader" hidden="true"/>
+    <categoryEntry id="517a-9816-c74f-32aa" name="3 Unit Leader" hidden="true"/>
+    <categoryEntry id="135a-7ca0-602a-1e30" name="4 Unit Leader" hidden="true"/>
+    <categoryEntry id="9220-dc1d-4ef3-4115" name="5 Unit Leader" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle**" hidden="false">
@@ -412,7 +421,7 @@
                 <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="73c7-ba20-18e8-8b37" value="3">
+            <modifier type="set" field="73c7-ba20-18e8-8b37" value="3.0">
               <conditions>
                 <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
               </conditions>
@@ -556,6 +565,84 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
+    <forceEntry id="4b7b-6f6f-c78e-d022" name="Path to Glory &lt;- DO NOT USE YET" hidden="true">
+      <categoryLinks>
+        <categoryLink id="7fee-444b-8e0d-4bcd" name="Champion" hidden="false" targetId="0065-ac21-6ff5-8025" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9821-1c72-7a2b-e317" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="54f0-0e56-aec0-1379" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="be87-0489-fe1a-6b12" name="Follower" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="false">
+          <modifiers>
+            <modifier type="set" field="9ba8-46ae-2967-b36c" value="2.0">
+              <conditions>
+                <condition field="selections" scope="4b7b-6f6f-c78e-d022" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3daf-a035-d3bc-1404" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9ba8-46ae-2967-b36c" value="4.0">
+              <conditions>
+                <condition field="selections" scope="4b7b-6f6f-c78e-d022" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="135a-7ca0-602a-1e30" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9ba8-46ae-2967-b36c" value="5.0">
+              <conditions>
+                <condition field="selections" scope="4b7b-6f6f-c78e-d022" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9220-dc1d-4ef3-4115" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9ba8-46ae-2967-b36c" value="3.0">
+              <conditions>
+                <condition field="selections" scope="4b7b-6f6f-c78e-d022" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="517a-9816-c74f-32aa" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9ba8-46ae-2967-b36c" value="1.0">
+              <conditions>
+                <condition field="selections" scope="4b7b-6f6f-c78e-d022" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0478-3545-1aca-947a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9ba8-46ae-2967-b36c" value="0.0">
+              <conditions>
+                <condition field="selections" scope="4b7b-6f6f-c78e-d022" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e647-64a9-63a0-f54c" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="9ba8-46ae-2967-b36c" value="3.0">
+              <conditions>
+                <condition field="selections" scope="4b7b-6f6f-c78e-d022" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="762c-96ba-0e33-7a6d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="9ba8-46ae-2967-b36c" value="1.0">
+              <conditions>
+                <condition field="selections" scope="4b7b-6f6f-c78e-d022" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="70cc-2548-f4b8-3f4e" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="9ba8-46ae-2967-b36c" value="5.0">
+              <conditions>
+                <condition field="selections" scope="4b7b-6f6f-c78e-d022" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffe1-2676-e33e-026e" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="9ba8-46ae-2967-b36c" value="4.0">
+              <conditions>
+                <condition field="selections" scope="4b7b-6f6f-c78e-d022" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="474c-8403-6cc8-ee8c" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="9ba8-46ae-2967-b36c" value="2.0">
+              <conditions>
+                <condition field="selections" scope="4b7b-6f6f-c78e-d022" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4887-46d9-8660-779c" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="5bd6-0a45-5735-ae2c" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9ba8-46ae-2967-b36c" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="2432-d93b-b745-eab4" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false">
+          <constraints>
+            <constraint field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0605-4006-4fc2-4cf1" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="0de6-eb86-b6ba-cef7" name="Game Options" hidden="false" targetId="1974-3f49-7f0b-8422" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
   <selectionEntries>
     <selectionEntry id="745a-d2c9-a076-2d70" name="Purchased Command Points" hidden="false" collective="false" import="true" type="upgrade">
@@ -572,14 +659,23 @@
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="50.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="19fe-0099-8319-6fdf" name="Points Variation" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="4b7b-6f6f-c78e-d022" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="any" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79ec-1682-d07c-0d5a" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="21a4-6280-03cc-4ccf" type="max"/>
@@ -599,6 +695,7 @@
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="aa3a-742d-9e34-e701" name="- 250" hidden="false" collective="false" import="true" type="upgrade">
@@ -607,6 +704,7 @@
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4c1d-7a55-fa32-d2be" name="+ 250" hidden="false" collective="false" import="true" type="upgrade">
@@ -615,6 +713,7 @@
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="45c9-0873-d072-007a" name="+  500" hidden="false" collective="false" import="true" type="upgrade">
@@ -623,6 +722,7 @@
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -630,6 +730,7 @@
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -744,6 +845,12 @@
         <categoryLink id="f07b-c3d4-19b5-7fea" name="New CategoryLink" hidden="false" targetId="bc8a-9257-1601-6d62" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="bc77-fa18-ede1-8c78" name="Path to Glory additional units" hidden="false" collective="false" import="true" targetId="1efd-2c69-7466-9405" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fe4e-251f-f425-61c2" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e551-0874-5a64-268a" type="max"/>
+      </constraints>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" publicationId="e51d-b1a3-pubEQ" page="3" hidden="false">
@@ -788,6 +895,7 @@
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5fdd-6634-f9f8-068a" name="Mystic Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -800,6 +908,7 @@
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="268a-c131-4914-7087" name="Realm of Origin" hidden="false" collective="false" import="true" type="upgrade">
@@ -811,6 +920,7 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a741-5681-7572-fa32" name="Game Type" hidden="false" collective="false" import="true" type="upgrade">
@@ -823,6 +933,7 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="35ce-f528-13ad-8cea" name="Realm of Battle" hidden="false" collective="false" import="true" type="upgrade">
@@ -834,6 +945,7 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="98c8-838b-2c8a-a9f7" name="Endless Spell: Aethervoid Pendulum" hidden="false" collective="false" import="true" type="upgrade">
@@ -877,6 +989,7 @@
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="98b9-64b2-7123-b7a2" name="Endless Spell: Balewind Vortex" hidden="false" collective="false" import="true" type="upgrade">
@@ -921,6 +1034,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4a8c-091f-84b5-47aa" name="Endless Spell: Chronomantic Cogs" hidden="false" collective="false" import="true" type="upgrade">
@@ -947,6 +1061,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="80.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ec28-3ec9-f2fa-82e5" name="Endless Spell: Emerald Lifeswarm" hidden="false" collective="false" import="true" type="upgrade">
@@ -986,6 +1101,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1ce8-9373-9c22-75a0" name="Endless Spell: Geminids of Uhl-Gyish" hidden="false" collective="false" import="true" type="upgrade">
@@ -1036,6 +1152,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="60.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="befc-365b-06f8-5575" name="Endless Spell: Horrorghast" hidden="false" collective="false" import="true" type="upgrade">
@@ -1075,6 +1192,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="60.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1f68-29ac-db98-ff85" name="Endless Spell: Lauchon the Soulseeker" hidden="false" collective="false" import="true" type="upgrade">
@@ -1119,6 +1237,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="60.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="37a1-b025-6723-3fe1" name="Endless Spell: Malevolent Maelstrom" hidden="false" collective="false" import="true" type="upgrade">
@@ -1163,6 +1282,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="10.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7ae1-8e71-327d-0893" name="Endless Spell: Prismatic Palisade" hidden="false" collective="false" import="true" type="upgrade">
@@ -1199,6 +1319,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="30.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6e7b-ce3f-9348-58e1" name="Endless Spell: Purple Sun of Shyish" hidden="false" collective="false" import="true" type="upgrade">
@@ -1248,6 +1369,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bc18-4df9-1a28-2df9" name="Endless Spell: Quicksilver Swords" hidden="false" collective="false" import="true" type="upgrade">
@@ -1292,6 +1414,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="30.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a99d-b987-6fa6-96f6" name="Endless Spell: Ravenak&apos;s Gnashing Jaws" hidden="false" collective="false" import="true" type="upgrade">
@@ -1336,6 +1459,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="30.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="58a3-4afb-62c5-dd39" name="Endless Spell: Shards of Valagharr" hidden="false" collective="false" import="true" type="upgrade">
@@ -1372,6 +1496,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="98da-d52f-7608-3034" name="Endless Spell: Soulscream Bridge" hidden="false" collective="false" import="true" type="upgrade">
@@ -1408,6 +1533,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ec18-8377-8f6b-2591" name="Endless Spell: Soulsnare Shackles" hidden="false" collective="false" import="true" type="upgrade">
@@ -1439,6 +1565,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d6de-646a-4dcc-e37d" name="Endless Spell: Suffocating﻿﻿ Gravetide﻿" hidden="false" collective="false" import="true" type="upgrade">
@@ -1488,6 +1615,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="20.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3ad9-857b-32ff-e44e" name="Endless Spell: The B﻿urning Head﻿﻿﻿" hidden="false" collective="false" import="true" type="upgrade">
@@ -1537,6 +1665,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="30.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d2dc-7e1a-c2e7-4cff" name="Endless Spell: Umbral Spellportal" hidden="false" collective="false" import="true" type="upgrade">
@@ -1568,6 +1697,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="70.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8a3f-74ea-a98a-e1ee" name="Scenery: Penumbral Engine" hidden="false" collective="false" import="true" type="upgrade">
@@ -1596,6 +1726,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="90.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="24c2-fff5-f17c-3d07" name="Gotrek Gurnisson" hidden="false" collective="false" import="true" type="unit">
@@ -1655,6 +1786,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8861-09b7-3df2-abf6" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -1666,11 +1798,80 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="520.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1efd-2c69-7466-9405" name="Path to Glory additional units" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1cf-d9de-1e3b-878d" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5757-c0f1-cfc1-9a9d" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="0fea-25c7-9352-4798" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5870-7009-afdb-300b" name="Additional Units" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3429-e304-145d-0b57" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="474c-8403-6cc8-ee8c" name="+4" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9870-86ee-bdcf-212a" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="762c-96ba-0e33-7a6d" name="+3" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d37c-e126-ba8a-7688" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4887-46d9-8660-779c" name="+2" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62f4-b9a1-298f-b4c1" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="70cc-2548-f4b8-3f4e" name="+1" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97b1-2bc6-921b-e514" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ffe1-2676-e33e-026e" name="+5" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b71-daf6-6dba-1a66" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -1696,6 +1897,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0722-70d0-8a75-b05d" name="2. Cloak of Mists and Shadows" hidden="false" collective="false" import="true" type="upgrade">
@@ -1714,6 +1916,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d40d-6292-3309-f03b" name="3. Blade of Dark Summons" hidden="false" collective="false" import="true" type="upgrade">
@@ -1732,6 +1935,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="385e-f5fc-d761-9e79" name="4. Black Amulet" hidden="false" collective="false" import="true" type="upgrade">
@@ -1750,6 +1954,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2326-95d1-92c4-1776" name="5. Tomb Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -1768,6 +1973,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2eab-a296-749d-9137" name="6. Ring of Immortality" hidden="false" collective="false" import="true" type="upgrade">
@@ -1786,6 +1992,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1808,6 +2015,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3fc2-a119-b371-27ac" name="2. Predator of the Shadows" hidden="false" collective="false" import="true" type="upgrade">
@@ -1823,6 +2031,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="83d0-b10b-7b0f-bb84" name="3. Death Incarnate" hidden="false" collective="false" import="true" type="upgrade">
@@ -1838,6 +2047,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8ab1-ca9e-3373-5b0c" name="4. Master of the Black Arts" hidden="false" collective="false" import="true" type="upgrade">
@@ -1853,6 +2063,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="053b-e6bd-cc34-d050" name="5. Red Fury" hidden="false" collective="false" import="true" type="upgrade">
@@ -1868,6 +2079,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="10c5-32f0-ca6f-7e7c" name="6. Supernatural Horror" hidden="false" collective="false" import="true" type="upgrade">
@@ -1880,6 +2092,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1905,6 +2118,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="11ee-4b6d-7d08-dd98" name="2. Battered Talisman" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
@@ -1923,6 +2137,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e734-c953-e710-a42a" name="3. Rockeye" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
@@ -1941,6 +2156,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b111-9840-cc58-ca44" name="4. Bellowing Blade" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
@@ -1959,6 +2175,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3cdf-ca0c-9c35-0727" name="5. Collar of Domination" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
@@ -1977,6 +2194,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="40a6-edd2-8f4c-bcbc" name="6. Battle Brew" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
@@ -1995,6 +2213,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2014,6 +2233,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b456-2252-df66-a511" name="2. Might is Right" publicationId="e51d-b1a3-pubE5LCI" page="" hidden="false" collective="false" import="true" type="upgrade">
@@ -2026,6 +2246,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="33e4-5c70-c48b-9472" name="3. Wild Fury" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
@@ -2038,6 +2259,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6b78-5f06-40c7-eab6" name="4. Bellowing Tyrant" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
@@ -2050,6 +2272,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e5b1-baeb-ed1b-e3f3" name="5. Big and Brutish" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
@@ -2062,6 +2285,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="fdf2-ddc3-5dd8-f6e6" name="6. Ravager" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
@@ -2074,6 +2298,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2093,6 +2318,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="aa8d-2468-307b-7223" name="2. Spiteful Duelist" hidden="false" collective="false" import="true" type="upgrade">
@@ -2105,6 +2331,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2ed5-ce10-22f2-9b67" name="3. Cunning Deceiver" hidden="false" collective="false" import="true" type="upgrade">
@@ -2117,6 +2344,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ce7b-5079-8e73-49df" name="4. Lord of War" hidden="false" collective="false" import="true" type="upgrade">
@@ -2129,6 +2357,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="100a-f21d-30bd-0e9a" name="5. Terrifying Presence" hidden="false" collective="false" import="true" type="upgrade">
@@ -2141,6 +2370,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3f5f-faca-cb53-7d82" name="6. Great Destroyer" hidden="false" collective="false" import="true" type="upgrade">
@@ -2153,6 +2383,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2172,6 +2403,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e366-464a-ed9e-3071" name="2. Inspiring" hidden="false" collective="false" import="true" type="upgrade">
@@ -2184,6 +2416,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0bfc-2753-ba37-63ec" name="3. Dauntless" hidden="false" collective="false" import="true" type="upgrade">
@@ -2196,6 +2429,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="cda1-69d4-81a2-af6f" name="4. Tenacious" hidden="false" collective="false" import="true" type="upgrade">
@@ -2208,6 +2442,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e6ce-6770-a355-3db5" name="5. Legendary Fighter" hidden="false" collective="false" import="true" type="upgrade">
@@ -2220,6 +2455,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0d9f-944c-3eb5-5e54" name="6. Master of Defence" hidden="false" collective="false" import="true" type="upgrade">
@@ -2232,6 +2468,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2257,6 +2494,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ad0e-8cce-201d-2119" name="2. Obstinate Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -2275,6 +2513,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8939-398d-2875-695e" name="3. Relic Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -2293,6 +2532,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="595f-756d-7d05-2336" name="4. Hoarfrost" hidden="false" collective="false" import="true" type="upgrade">
@@ -2311,6 +2551,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0c59-5080-ae42-7599" name="5. Talisman of Blinding Light" hidden="false" collective="false" import="true" type="upgrade">
@@ -2329,6 +2570,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3ad1-6df0-b131-e5f5" name="6. Phoenix Stone" hidden="false" collective="false" import="true" type="upgrade">
@@ -2347,6 +2589,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2372,6 +2615,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="bce7-28e0-79ca-8ec1" name="2. Chaos Runeblade" hidden="false" collective="false" import="true" type="upgrade">
@@ -2390,6 +2634,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8a25-2b31-1228-58ed" name="3. Beguiling Gem" hidden="false" collective="false" import="true" type="upgrade">
@@ -2408,6 +2653,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4048-8842-13f8-6487" name="4. Chaos Talisman" hidden="false" collective="false" import="true" type="upgrade">
@@ -2426,6 +2672,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="99a8-19b8-c4fc-5b82" name="5. Favour of the Gods" hidden="false" collective="false" import="true" type="upgrade">
@@ -2441,6 +2688,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b9dd-e27b-f206-d911" name="6. Crown of Conquest" hidden="false" collective="false" import="true" type="upgrade">
@@ -2456,6 +2704,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2483,6 +2732,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="23fd-8b31-0d59-0674" name="2. Blood Sacrifice" hidden="false" collective="false" import="true" type="upgrade">
@@ -2495,6 +2745,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a089-13dc-617b-2eab" name="3. Resanguination" hidden="false" collective="false" import="true" type="upgrade">
@@ -2507,6 +2758,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d9d0-8915-d319-7a99" name="4. Brazen Fury" hidden="false" collective="false" import="true" type="upgrade">
@@ -2519,6 +2771,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e5ab-1394-46b7-55df" name="5. Killing Frenzy" hidden="false" collective="false" import="true" type="upgrade">
@@ -2531,6 +2784,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e9ec-b172-d5a2-81b0" name="6. Magebane Hex" hidden="false" collective="false" import="true" type="upgrade">
@@ -2543,6 +2797,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2577,36 +2832,43 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <selectionEntry id="2b64-08f8-641d-be66" name="Origin: Ghyran" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4c81-5c75-b32a-c854" name="Origin: Ghur" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e938-2bcb-c732-9572" name="Origin: Chamon" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="804d-fbe5-0759-58ce" name="Origin: Aqshy" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="916b-8d03-321f-4845" name="Origin: Shyish" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="689f-c36d-3382-5eca" name="Origin: Ulgu" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="52b1-a41c-c680-c537" name="Origin: Hysh" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2639,6 +2901,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="07bb-d221-2a3b-506b" name="6. Wand of Restoration" hidden="false" collective="false" import="true" type="upgrade">
@@ -2657,6 +2920,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2391-76ae-60e1-9d73" name="5. Ghyrropian Gauntlets" hidden="false" collective="false" import="true" type="upgrade">
@@ -2675,6 +2939,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3c09-25d7-d1dd-588a" name="4. Greenglade Flask" hidden="false" collective="false" import="true" type="upgrade">
@@ -2693,6 +2958,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="66c8-af5a-7b1a-992d" name="2. Verdant Mantle" hidden="false" collective="false" import="true" type="upgrade">
@@ -2711,6 +2977,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3acc-7b56-47f8-9c73" name="3. Jade Diadem" hidden="false" collective="false" import="true" type="upgrade">
@@ -2729,6 +2996,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2761,6 +3029,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2793,6 +3062,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2825,6 +3095,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2857,6 +3128,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2889,6 +3161,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2921,6 +3194,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2952,6 +3226,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="cea8-e4b2-c44f-c7b4" name="2000 Points - Battlehost" hidden="false" collective="false" import="true" type="upgrade">
@@ -2975,6 +3250,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ef67-15fb-487c-397a" name="2500 Points - Warhost" hidden="false" collective="false" import="true" type="upgrade">
@@ -2998,11 +3274,13 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ca54-0d07-72c2-d26f" name="No Points or Battlerole Validation (Open)" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3047,6 +3325,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3109,6 +3388,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ed53-d347-e94c-2431" name="Battle: Chamon" hidden="false" collective="false" import="true" type="upgrade">
@@ -3163,6 +3443,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="afb2-6845-cd03-2596" name="Battle: Ghur" hidden="false" collective="false" import="true" type="upgrade">
@@ -3217,6 +3498,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="286a-bfe7-f725-ca75" name="Battle: Ghyran" hidden="false" collective="false" import="true" type="upgrade">
@@ -3271,6 +3553,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="632b-73ed-9385-2491" name="Battle: Hysh" hidden="false" collective="false" import="true" type="upgrade">
@@ -3325,6 +3608,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="098f-0986-2570-bece" name="Battle: Shyish" hidden="false" collective="false" import="true" type="upgrade">
@@ -3379,6 +3663,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3923-b6b9-c500-1062" name="Battle: Ulgu" hidden="false" collective="false" import="true" type="upgrade">
@@ -3433,6 +3718,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e236-f0fc-8bb0-ecb4" name="Battle: The Eightpoints" hidden="false" collective="false" import="true" type="upgrade">
@@ -3451,6 +3737,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

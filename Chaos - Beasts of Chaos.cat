@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c9b2-1fe6-2c3e-3b27" name="Chaos - Beasts of Chaos" revision="13" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="66" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c9b2-1fe6-2c3e-3b27" name="Chaos - Beasts of Chaos" revision="15" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="67" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -226,6 +226,197 @@
     </entryLink>
     <entryLink id="dce3-da28-d6ab-315e" name="One-Eyed Grunnock - Warstompa Mercenary" hidden="false" collective="false" import="false" targetId="40c7-4bb8-cfd9-7319" type="selectionEntry"/>
     <entryLink id="b385-5c65-87ed-88c3" name="Battalion: Baerogg&apos;s Desecrators (Open/Narrative Play Only)" hidden="false" collective="false" import="true" targetId="5310-1cd5-e313-e0d0" type="selectionEntry"/>
+    <entryLink id="784b-b9c9-a922-5911" name="Slaangor Fiendbloods" hidden="false" collective="false" import="true" targetId="8d39-217e-4bbd-e732" type="selectionEntry"/>
+    <entryLink id="8d31-a52a-9734-0257" name="Beastlord" hidden="false" collective="false" import="true" targetId="0ab8-4ac7-3a61-0cd4" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="3f92-072f-dd39-84db" name="New CategoryLink" hidden="false" targetId="0065-ac21-6ff5-8025" primary="true"/>
+        <categoryLink id="fb02-a414-f64f-11a5" name="5 Unit Leader" hidden="false" targetId="9220-dc1d-4ef3-4115" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="27a1-ffe4-d820-6ce3" name="Beastlord" hidden="false" collective="false" import="true" targetId="0ab8-4ac7-3a61-0cd4" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="2c0c-e91d-924c-a844" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="1.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="5043-6dbf-2117-4d3e" name="Bestigors" hidden="false" collective="false" import="true" targetId="a2ce-3a32-3c68-24fb" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="e027-8f74-7d42-b006" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="2.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="fc45-1229-5619-e410" name="Bullgors" hidden="false" collective="false" import="true" targetId="f6f6-dd85-23f1-45dd" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="6529-afe9-94f7-04bc" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="2.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="5e7d-333a-8547-fb11" name="Centigors" hidden="false" collective="false" import="true" targetId="a1a7-0dfc-a40b-d680" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="bfed-3681-2f05-8d19" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="1.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="a29c-fd94-ae3f-1a11" name="Chaos Gargant" hidden="false" collective="false" import="true" targetId="e5c2-d8df-2527-dc3d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="4f06-7655-8ed2-c94b" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="2.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="20a2-8139-0a1f-4d91" name="Chaos Warhounds" hidden="false" collective="false" import="true" targetId="3975-c1f2-7a13-beb5" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="c718-41dd-7398-756f" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="1.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="6802-25f6-caa5-273f" name="Chimera" hidden="false" collective="false" import="true" targetId="68ec-303a-bfaa-f759" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="b4ff-44df-d318-c72b" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="2.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="9fcf-9f56-eaf4-5b43" name="Cockatrice" hidden="false" collective="false" import="true" targetId="ce40-4ad1-7abd-c37f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="4640-fc92-2399-9f1b" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="1.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="517b-bb50-9ef8-0299" name="Cygor" hidden="false" collective="false" import="true" targetId="a400-2e81-dba4-82e4" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="f475-f1ca-6e4e-bfdf" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="2.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="1408-e209-e87c-97f6" name="Doombull" hidden="false" collective="false" import="true" targetId="d705-0e86-4132-7af8" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="d499-c81d-c161-bde0" name="New CategoryLink" hidden="false" targetId="0065-ac21-6ff5-8025" primary="true"/>
+        <categoryLink id="b5a9-c059-db63-39ef" name="4 Unit Leader" hidden="false" targetId="135a-7ca0-602a-1e30" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="b77d-4c6b-7f11-e433" name="Dragon Ogor Shaggoth" hidden="false" collective="false" import="true" targetId="f427-1a9c-c749-a639" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="7237-620a-248d-9a57" name="New CategoryLink" hidden="false" targetId="0065-ac21-6ff5-8025" primary="true"/>
+        <categoryLink id="fcc2-ec32-75c9-bc2d" name="3 Unit Leader" hidden="false" targetId="517a-9816-c74f-32aa" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="7d05-f3ea-796b-481e" name="Dragon Ogors" hidden="false" collective="false" import="true" targetId="6bec-d4e0-72ef-77e0" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="f613-e69d-a30a-3e7e" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="2.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="a4e0-8120-b043-ae15" name="Ghorgon" hidden="false" collective="false" import="true" targetId="f321-87b5-12d6-29b4" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="fc99-172f-018e-f5f6" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="2.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="215a-4272-63a2-3665" name="Great Bray-shaman" hidden="false" collective="false" import="true" targetId="5645-9e3f-0298-de9d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="e6ca-7175-c908-8546" name="New CategoryLink" hidden="false" targetId="0065-ac21-6ff5-8025" primary="true"/>
+        <categoryLink id="a8a1-8161-2d88-7fa2" name="5 Unit Leader" hidden="false" targetId="9220-dc1d-4ef3-4115" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="6115-2440-145c-125d" name="Jabberslythe" hidden="false" collective="false" import="true" targetId="a015-0d76-0edf-013c" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="c587-a449-b941-75c7" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="1.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="c80e-e21f-f93b-1333" name="Razorgors" hidden="false" collective="false" import="true" targetId="1a00-d6c9-99da-daf5" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="0578-b3ea-2502-6e80" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="2.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="871e-fc43-ba7b-d92b" name="Tuskgor Chariots" hidden="false" collective="false" import="true" targetId="26a3-0409-c61a-641b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="fe85-8e09-6eac-1d8a" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="1.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="aad9-d3f8-e494-0152" name="Tzaangor Enlightened" hidden="false" collective="false" import="true" targetId="15ed-b222-83e4-0ada" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="5dc5-040e-f164-5324" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="2.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="4a70-a653-d221-a126" name="Tzaangor Shaman" hidden="false" collective="false" import="true" targetId="cad5-c0e6-cbf2-99fb" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="26ab-57d1-4bce-fbbe" name="New CategoryLink" hidden="false" targetId="0065-ac21-6ff5-8025" primary="true"/>
+        <categoryLink id="a7fa-dcd5-4c48-a0b4" name="3 Unit Leader" hidden="false" targetId="517a-9816-c74f-32aa" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="0c16-e3f2-6122-c570" name="Tzaangor Skyfires" hidden="false" collective="false" import="true" targetId="7aeb-7e4a-3ec8-90c5" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="6b79-dd0e-b96a-3431" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="2.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="543e-407b-8967-24e5" name="Tzaangors" hidden="false" collective="false" import="true" targetId="d636-0425-7a14-923c" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="28d8-c887-927c-d05a" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="2.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="08b8-dfa0-6f8d-30be" name="Ungor Raiders" hidden="false" collective="false" import="true" targetId="6a9e-4be2-9c76-a1f1" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="7549-bd8b-a5f0-4648" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="1.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="4c41-f1d0-8e32-efa4" name="Ungors" hidden="false" collective="false" import="true" targetId="860f-3974-14a3-3237" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="2cc0-f085-050c-ec7a" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="1.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="9006-5b8f-b64a-427f" name="Chaos Spawn" hidden="false" collective="false" import="true" targetId="463c-335b-796c-ffb2" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="2c76-650a-570a-dc4b" name="New CategoryLink" hidden="false" targetId="9705-3b59-ce7a-eac2" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Die Rolls" typeId="5bd6-0a45-5735-ae2c" value="1.0"/>
+      </costs>
+    </entryLink>
   </entryLinks>
   <catalogueLinks>
     <catalogueLink id="3b9a-1b91-5e03-b8f6" name="Chaos - Beasts of Chaos - Data" targetId="a990-882b-7e62-27e9" type="catalogue" importRootEntries="true"/>
